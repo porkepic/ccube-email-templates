@@ -103,7 +103,10 @@ module.exports = function(grunt) {
               preserveMediaQueries: true,
               applyAttributesTableElements: true,
               applyWidthAttributes: true,
-              preserveImportant: true
+              preserveImportant: true,
+              webResources: {
+                images: false
+              }
             },
             files: [{
               expand: true,
@@ -333,7 +336,7 @@ module.exports = function(grunt) {
     grunt.registerTask('cdnify', ['default','cloudfiles','cdn:cloudfiles']);
 
     // Upload image files to Amazon S3
-    grunt.registerTask('s3upload', ['aws_s3:prod', 'cdn:aws_s3']);
+    grunt.registerTask('s3upload', ['default', 'aws_s3:prod', 'cdn:aws_s3']);
 
     // Launch the express server and start watching
     // NOTE: The server will not stay running if the grunt watch task is not active

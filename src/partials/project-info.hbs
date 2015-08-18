@@ -33,9 +33,9 @@
       <strong>Chargé de projet</strong>
     </td>
     <td>
-      <%= workflow.project_manager.name %>
+      <%= workflow.project_manager.full_name %>
       <div class="text-muted">
-        (<%= workflow.estimator.phone_numbers.first.try(:value) %>)
+        (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
       </div>
     </td>
   </tr>
@@ -44,9 +44,9 @@
       <strong>Estimateur</strong>
     </td>
     <td>
-      <%= workflow.estimator.name %>
+      <%= workflow.estimator.full_name %>
       <div class="text-muted">
-        (<%= workflow.estimator.phone_numbers.first.try(:value) %>)
+        (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
       </div>
     </td>
   </tr>
