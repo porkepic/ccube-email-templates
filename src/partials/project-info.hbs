@@ -33,10 +33,14 @@
       <strong>Chargé de projet</strong>
     </td>
     <td>
-      <%= workflow.project_manager.full_name %>
-      <div class="text-muted">
-        (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
-      </div>
+      <% if workflow.project_manager.present? %>
+        <%= workflow.project_manager.full_name %>
+        <div class="text-muted">
+          (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
+        </div>
+      <% else %>
+        -
+      <% end %>
     </td>
   </tr>
   <tr>
@@ -44,10 +48,14 @@
       <strong>Estimateur</strong>
     </td>
     <td>
-      <%= workflow.estimator.full_name %>
-      <div class="text-muted">
-        (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
-      </div>
+      <% if workflow.estimator.present? %>
+        <%= workflow.estimator.full_name %>
+        <div class="text-muted">
+          (<%= workflow.estimator.contact.phone_numbers.first.try(:value) %>)
+        </div>
+      <% else %>
+        -
+      <% end %>
     </td>
   </tr>
 </table>
