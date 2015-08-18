@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <td colspan=2>
+      <h3>Informations sur l'appel de service.</h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Projet #</strong>
+    </td>
+    <td>
+      <%= workflow.number %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Statut</strong>
+    </td>
+    <td>
+      <%= workflow.status_name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Immeuble</strong>
+    </td>
+    <td>
+      <%= workflow.building.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Chargé de projet</strong>
+    </td>
+    <td>
+      <%= workflow.project_manager.name %>
+      <div class="text-muted">
+        (<%= workflow.estimator.phone_numbers.first.try(:value) %>)
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Estimateur</strong>
+    </td>
+    <td>
+      <%= workflow.estimator.name %>
+      <div class="text-muted">
+        (<%= workflow.estimator.phone_numbers.first.try(:value) %>)
+      </div>
+    </td>
+  </tr>
+</table>

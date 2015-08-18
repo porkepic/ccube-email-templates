@@ -1,0 +1,45 @@
+---
+layout: default.hbs
+subject: Appel de service
+---
+<span class="preheader">Mise-à-jour par rapport à votre appel de service.</span>
+<div class="header">
+  <table>
+    <tr>
+      <td class="align-center">
+        <a href="http://www.toiturecouture.com"><img src="../src/img/couture.png" height="65" alt="Toiture Couture"></a>
+      </td>
+    </tr>
+  </table>
+</div>
+<table class="main">
+  <tr>
+    <td class="wrapper">
+      <table>
+        <tr>
+          <td>
+            <%= message %>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table class="details">
+  <tr>
+    <td class="wrapper">
+      {{> project-info}}
+    </td>
+  </tr>
+</table>
+
+<div class="footer">
+  <table>
+    <tr>
+      <td class="align-center">
+        {{> urgency }}
+      </td>
+    </tr>
+  </table>
+</div>
